@@ -6,10 +6,10 @@ local playerName = game.Players.LocalPlayer.Name
 
 local serv = win:Server("Preview", "")
 
-local btns = serv:Channel("My Restaurant")
+local btns = serv:Channel("Auto")
 
 btns:Button(
-    "Auto Edit",
+    "Auto Edit (Sitting on PC)",
     function()
         local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -27,4 +27,14 @@ btns:Button(
     end
 )
 
+btns:Button(
+    "Auto Click (Telephone)",
+    function()
+        local ReplicatedStorage = game:GetService("ReplicatedStorage")
+        while true do
+            game:GetService("ReplicatedStorage").fileMade:FireServer()
+            wait(0.1)
+        end
+    end
+)
     
