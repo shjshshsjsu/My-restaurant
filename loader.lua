@@ -9,6 +9,7 @@ local btns = serv:Channel("My Restaurant")
 
 btns:Button(
     "Auto Edit",
+    function()
     while true do
 game:GetService("ReplicatedStorage").singleVideo:FireServer(unpack(args))
     
